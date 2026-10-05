@@ -290,14 +290,15 @@ a{color:#F2F1EC;text-decoration:none}a:hover{color:#FFFFFF}
 .va-btn:hover{transform:translateY(-2px)}
 .va-chip{transition:border-color .2s ease, color .2s ease}
 .va-chip:hover{border-color:#5A5E66 !important;color:#FFFFFF !important}
-.va-track{display:flex;gap:56px;width:max-content;animation:va-marq 46s linear infinite}
+.va-track{display:flex;gap:56px;padding-right:56px;width:max-content;animation:va-marq 240s linear infinite}
+.va-track:hover{animation-play-state:paused}
 @keyframes va-marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .va-caret{animation:va-c 1s steps(1) infinite}
 @keyframes va-c{50%{opacity:0}}
 .va-span2{grid-column:span 2}
 .va-span3{grid-column:1 / -1}
 @media (max-width:820px){.va-hide-sm{display:none !important}.va-span2{grid-column:auto}}
-@media (prefers-reduced-motion:reduce){.va-track,.va-caret{animation:none}}
+@media (prefers-reduced-motion:reduce){.va-caret{animation:none}}
 </style>
 </helmet>
 
@@ -378,7 +379,7 @@ a{color:#F2F1EC;text-decoration:none}a:hover{color:#FFFFFF}
 
   <!-- MARQUEE -->
   <section aria-label="Core stack" style="border-top: 1px solid #1E2025; border-bottom: 1px solid #1E2025; padding: 26px 0; overflow: hidden; background: #0E0F12">
-    <div class="va-track" style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: clamp(28px, 4vw, 52px); letter-spacing: -0.03em; color: #5A5E66; white-space: nowrap">
+    <div class="va-track" style="animation-duration: {{marqueeDur}}; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: clamp(28px, 4vw, 52px); letter-spacing: -0.03em; color: #5A5E66; white-space: nowrap">
       <sc-for list="{{marquee}}" as="s" hint-placeholder-count="12">
         <span style="display: inline-flex; align-items: center; gap: 56px">{{s}}<span style="color: {{accent}}">✳</span></span>
       </sc-for>
@@ -635,7 +636,7 @@ a{color:#F2F1EC;text-decoration:none}a:hover{color:#FFFFFF}
 
   
   <section aria-label="Core stack" style="border-top: 1px solid #1E2025; border-bottom: 1px solid #1E2025; padding: 26px 0; overflow: hidden; background: #0E0F12">
-    <div class="va-track" style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: clamp(28px, 4vw, 52px); letter-spacing: -0.03em; color: #5A5E66; white-space: nowrap">
+    <div class="va-track" style="animation-duration: {{marqueeDur}}; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: clamp(28px, 4vw, 52px); letter-spacing: -0.03em; color: #5A5E66; white-space: nowrap">
       
         <span style="display: inline-flex; align-items: center; gap: 56px">{{s}}<span style="color: #C6F432">✳</span></span>
       
@@ -1017,9 +1018,9 @@ class Component extends DCLogic {
       { n: String(G.length), l: t.sAreas },
       { n: '1', l: t.sOne }
     ];
-    const core = ['Node.js', 'Vue 3', 'Rust', 'Three.js', 'PostgreSQL', 'Kubernetes', 'RAG', 'MCP', 'WebRTC', 'GraphQL'];
+    const core = ['Node.js', 'Vue 3', 'TypeScript', 'Rust', 'Nuxt', 'Three.js', 'WebGL', 'Module Federation', 'GraphQL', 'WebSocket', 'WebRTC', 'PostgreSQL', 'Redis', 'Kafka', 'ClickHouse', 'MongoDB', 'RabbitMQ', 'Docker', 'Kubernetes', 'ArgoCD', 'Helm', 'Vault', 'OpenTelemetry', 'RAG', 'MCP', 'pgvector', 'Gemini', 'OpenAI', 'Java / Spring', 'Unity 3D'];
 
-    return { accent, t, langs, term, stats, marquee: core.concat(core), filters, shown, can, groups };
+    return { accent, t, langs, term, stats, marquee: core.concat(core), marqueeDur: (core.length * 8) + 's', filters, shown, can, groups };
   }
 }
 </script>
