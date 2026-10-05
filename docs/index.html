@@ -1,130 +1,1028 @@
-<!doctype html><html lang="en"><head><title>Viktor Abdulov — Fullstack Developer</title><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/><meta http-equiv="Pragma" content="no-cache"/><meta http-equiv="Expires" content="0"/><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><style>.area {
-			background: #4e54c8;
-			background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-
-
-		}
-
-		.circles {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-		}
-
-		.circles li {
-			position: absolute;
-			display: block;
-			list-style: none;
-			width: 20px;
-			height: 20px;
-			background: rgba(255, 255, 255, 0.2);
-			animation: animate 25s linear infinite;
-			bottom: -150px;
-
-		}
-
-		.circles li:nth-child(1) {
-			left: 25%;
-			width: 80px;
-			height: 80px;
-			animation-delay: 0s;
-		}
-
-
-		.circles li:nth-child(2) {
-			left: 10%;
-			width: 20px;
-			height: 20px;
-			animation-delay: 2s;
-			animation-duration: 12s;
-		}
-
-		.circles li:nth-child(3) {
-			left: 70%;
-			width: 20px;
-			height: 20px;
-			animation-delay: 4s;
-		}
-
-		.circles li:nth-child(4) {
-			left: 40%;
-			width: 60px;
-			height: 60px;
-			animation-delay: 0s;
-			animation-duration: 18s;
-		}
-
-		.circles li:nth-child(5) {
-			left: 65%;
-			width: 20px;
-			height: 20px;
-			animation-delay: 0s;
-		}
-
-		.circles li:nth-child(6) {
-			left: 75%;
-			width: 110px;
-			height: 110px;
-			animation-delay: 3s;
-		}
-
-		.circles li:nth-child(7) {
-			left: 35%;
-			width: 150px;
-			height: 150px;
-			animation-delay: 7s;
-		}
-
-		.circles li:nth-child(8) {
-			left: 50%;
-			width: 25px;
-			height: 25px;
-			animation-delay: 15s;
-			animation-duration: 45s;
-		}
-
-		.circles li:nth-child(9) {
-			left: 20%;
-			width: 15px;
-			height: 15px;
-			animation-delay: 2s;
-			animation-duration: 35s;
-		}
-
-		.circles li:nth-child(10) {
-			left: 85%;
-			width: 150px;
-			height: 150px;
-			animation-delay: 0s;
-			animation-duration: 11s;
-		}
-
-
-
-		@keyframes animate {
-
-			0% {
-				transform: translateY(0) rotate(0deg);
-				opacity: 1;
-				border-radius: 0;
-			}
-
-			100% {
-				transform: translateY(-1000px) rotate(720deg);
-				opacity: 0;
-				border-radius: 50%;
-			}
-
-		}</style><base href="/"><script defer="defer" src="/bundle.js"></script><link href="/main.css" rel="stylesheet"></head><script async src="https://www.googletagmanager.com/gtag/js?id=G-25DJFZJ4H4"></script><script>window.dataLayer = window.dataLayer || [];
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>Viktor Abdulov — Fullstack Developer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Viktor Abdulov — fullstack developer: Node.js, Vue 3, Three.js, Kubernetes, AI integrations.">
+<link rel="icon" href="favicon.ico">
+<link rel="preload" href="fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-25DJFZJ4H4"></script>
+<script>window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+  gtag('config', 'G-25DJFZJ4H4');</script>
+<script src="js/react.production.min.js"></script>
+<script src="js/react-dom.production.min.js"></script>
+<script src="js/dc-runtime.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>/* vietnamese */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGHInHEVA.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGGInHEVA.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("fonts/bricolage-grotesque-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGHInHEVA.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGGInHEVA.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("fonts/bricolage-grotesque-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGHInHEVA.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGGInHEVA.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("fonts/bricolage-grotesque-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/instrumentsans/v4/pxiTypc9vsFDm051Uf6KVwgkfoSxQ0GsQv8ToedPibnr0She1YmV.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("fonts/instrument-sans-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/instrumentsans/v4/pxiTypc9vsFDm051Uf6KVwgkfoSxQ0GsQv8ToedPibnr0She1YmV.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("fonts/instrument-sans-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/instrumentsans/v4/pxiTypc9vsFDm051Uf6KVwgkfoSxQ0GsQv8ToedPibnr0She1YmV.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("fonts/instrument-sans-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPx3cwhsk.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxTcwhsk.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxPcwhsk.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPx_cwhsk.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPx7cwhsk.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/jetbrains-mono-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPx3cwhsk.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxTcwhsk.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxPcwhsk.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPx_cwhsk.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPx7cwhsk.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/jetbrains-mono-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+body{margin:0;background:#0B0C0E}
+a{color:#F2F1EC;text-decoration:none}a:hover{color:#FFFFFF}
+.va-row{transition:background .25s ease, padding .25s ease}
+.va-row:hover{background:#15171B;padding-left:16px !important}
+.va-card{transition:transform .3s ease, border-color .3s ease}
+.va-card:hover{transform:translateY(-4px);border-color:#3A3D44 !important}
+.va-btn{transition:transform .2s ease, background .2s ease}
+.va-btn:hover{transform:translateY(-2px)}
+.va-chip{transition:border-color .2s ease, color .2s ease}
+.va-chip:hover{border-color:#5A5E66 !important;color:#FFFFFF !important}
+.va-track{display:flex;gap:56px;width:max-content;animation:va-marq 46s linear infinite}
+@keyframes va-marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.va-caret{animation:va-c 1s steps(1) infinite}
+@keyframes va-c{50%{opacity:0}}
+.va-span2{grid-column:span 2}
+.va-span3{grid-column:1 / -1}
+@media (max-width:820px){.va-hide-sm{display:none !important}.va-span2{grid-column:auto}}
+@media (prefers-reduced-motion:reduce){.va-track,.va-caret{animation:none}}
+</style>
+</helmet>
 
-  gtag('config', 'G-25DJFZJ4H4');</script><body><div id="app"></div></body></html>
+<div style="background: #0B0C0E; color: #F2F1EC; font-family: 'Instrument Sans', system-ui, sans-serif; min-height: 100vh; overflow-x: hidden" data-canvas-width="1440" data-canvas-height="5600">
+
+  <!-- NAV -->
+  <header style="position: sticky; top: 0; z-index: 10; background: rgba(11,12,14,0.82); backdrop-filter: blur(14px); border-bottom: 1px solid #1E2025">
+    <nav style="max-width: 1280px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+      <a href="#top" style="display: flex; align-items: center; gap: 10px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 22px; letter-spacing: -0.02em">
+        <span style="display: inline-flex; width: 36px; height: 36px; border-radius: 10px; background: {{accent}}; color: #0B0C0E; align-items: center; justify-content: center; font-size: 15px">VA</span>
+        <span>abdulov<span style="color: {{accent}}">.</span></span>
+      </a>
+      <div class="va-hide-sm" style="display: flex; gap: 32px; font-family: 'JetBrains Mono', monospace; font-size: 13px">
+        <a href="#work" style="color: #A3A6AD">01 / {{t.navWork}}</a>
+        <a href="#expertise" style="color: #A3A6AD">02 / {{t.navExpertise}}</a>
+        <a href="#stack" style="color: #A3A6AD">03 / {{t.navStack}}</a>
+        <a href="#contact" style="color: #A3A6AD">04 / {{t.navContact}}</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div role="group" aria-label="Language" style="display: inline-flex; padding: 3px; border: 1px solid #2A2D33; border-radius: 999px">
+          <sc-for list="{{langs}}" as="l" hint-placeholder-count="2">
+            <sc-if value="{{l.on}}" hint-placeholder-val="{{ false }}">
+              <button sc-camel-on-click="{{l.pick}}" aria-pressed="true" style="min-width: 44px; min-height: 38px; border: 0; border-radius: 999px; background: #F2F1EC; color: #0B0C0E; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; cursor: pointer">{{l.label}}</button>
+            </sc-if>
+            <sc-if value="{{l.off}}" hint-placeholder-val="{{ true }}">
+              <button sc-camel-on-click="{{l.pick}}" aria-pressed="false" style="min-width: 44px; min-height: 38px; border: 0; border-radius: 999px; background: transparent; color: #A3A6AD; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; cursor: pointer">{{l.label}}</button>
+            </sc-if>
+          </sc-for>
+        </div>
+        <a class="va-btn va-hide-sm" href="https://t.me/va_dev" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; background: {{accent}}; color: #0B0C0E; font-size: 14px; font-weight: 600">{{t.navCta}}</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" style="max-width: 1280px; margin: 0 auto; padding: 96px 24px 72px; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-end">
+    <div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #A3A6AD">{{t.heroLabel}}</div>
+      <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(56px, 9vw, 136px); line-height: 0.9; letter-spacing: -0.045em">{{t.first}}<br>{{t.last}}<span style="color: {{accent}}">_</span></h1>
+      <p style="margin: 0; max-width: 600px; font-size: clamp(18px, 1.6vw, 21px); line-height: 1.55; color: #C9CBD0">{{t.lead}}</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px">
+        <a class="va-btn" href="#work" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 999px; background: {{accent}}; color: #0B0C0E; font-weight: 600; font-size: 16px">
+          {{t.ctaWork}}
+          <svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg>
+        </a>
+        <a class="va-btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 999px; border: 1px solid #2A2D33; font-weight: 500; font-size: 16px">{{t.ctaContact}}</a>
+      </div>
+    </div>
+
+    <div style="flex: 1 1 400px; min-width: 0; border: 1px solid #23262C; border-radius: 20px; background: #111317; overflow: hidden; box-shadow: 0 40px 80px -40px rgba(0,0,0,0.8)">
+      <div style="display: flex; align-items: center; gap: 8px; padding: 14px 18px; border-bottom: 1px solid #1E2025">
+        <span style="width: 11px; height: 11px; border-radius: 50%; background: #3A3D44"></span>
+        <span style="width: 11px; height: 11px; border-radius: 50%; background: #3A3D44"></span>
+        <span style="width: 11px; height: 11px; border-radius: 50%; background: #3A3D44"></span>
+        <span style="margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8B8F97">~/viktor — zsh</span>
+      </div>
+      <div style="padding: 22px; font-family: 'JetBrains Mono', monospace; font-size: 14px; line-height: 1.85; color: #8B8F97">
+        <div style="color: #C9CBD0"><span style="color: {{accent}}">❯</span> whoami --stack</div>
+        <sc-for list="{{term}}" as="r" hint-placeholder-count="5">
+          <div style="display: flex; gap: 12px"><span style="width: 56px; flex: none">{{r.k}}</span><span style="color: #F2F1EC">{{r.v}}</span></div>
+        </sc-for>
+        <div style="margin-top: 8px"><span style="color: {{accent}}">❯</span> <span class="va-caret" style="display: inline-block; width: 9px; height: 17px; background: #F2F1EC; vertical-align: -3px"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section style="max-width: 1280px; margin: 0 auto; padding: 0 24px 80px">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); border-top: 1px solid #1E2025; border-bottom: 1px solid #1E2025">
+      <sc-for list="{{stats}}" as="s" hint-placeholder-count="4">
+        <div style="padding: 28px 0; display: flex; flex-direction: column; gap: 6px">
+          <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 48px; letter-spacing: -0.03em">{{s.n}}</div>
+          <div style="font-size: 15px; color: #A3A6AD">{{s.l}}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <section aria-label="Core stack" style="border-top: 1px solid #1E2025; border-bottom: 1px solid #1E2025; padding: 26px 0; overflow: hidden; background: #0E0F12">
+    <div class="va-track" style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: clamp(28px, 4vw, 52px); letter-spacing: -0.03em; color: #5A5E66; white-space: nowrap">
+      <sc-for list="{{marquee}}" as="s" hint-placeholder-count="12">
+        <span style="display: inline-flex; align-items: center; gap: 56px">{{s}}<span style="color: {{accent}}">✳</span></span>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" style="max-width: 1280px; margin: 0 auto; padding: 120px 24px 80px">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 40px">
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: {{accent}}">01 / {{t.navWork}}</div>
+        <h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(40px, 5.5vw, 80px); line-height: 0.95; letter-spacing: -0.04em">{{t.workTitle}}</h2>
+      </div>
+      <div role="group" aria-label="Filter projects" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 720px">
+        <sc-for list="{{filters}}" as="f" hint-placeholder-count="9">
+          <sc-if value="{{f.on}}" hint-placeholder-val="{{ false }}">
+            <button sc-camel-on-click="{{f.pick}}" aria-pressed="true" style="min-height: 44px; padding: 0 16px; border-radius: 999px; cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 13px; background: {{accent}}; color: #0B0C0E; border: 1px solid {{accent}}">{{f.label}} <span style="opacity: 0.6">{{f.count}}</span></button>
+          </sc-if>
+          <sc-if value="{{f.off}}" hint-placeholder-val="{{ true }}">
+            <button sc-camel-on-click="{{f.pick}}" aria-pressed="false" style="min-height: 44px; padding: 0 16px; border-radius: 999px; cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 13px; background: transparent; color: #C9CBD0; border: 1px solid #2A2D33">{{f.label}} <span style="color: #8B8F97">{{f.count}}</span></button>
+          </sc-if>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="border-top: 1px solid #23262C">
+      <sc-for list="{{shown}}" as="p" hint-placeholder-count="6">
+        <div style="border-bottom: 1px solid #23262C">
+          <button class="va-row" sc-camel-on-click="{{p.toggle}}" aria-expanded="{{p.expanded}}" style="width: 100%; display: flex; flex-wrap: wrap; align-items: center; gap: 24px; padding: 28px 4px; background: transparent; border: 0; color: #F2F1EC; text-align: left; cursor: pointer; font: inherit">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #8B8F97; width: 32px">{{p.num}}</span>
+            <span style="flex: 999 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+              <span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: clamp(26px, 3vw, 40px); letter-spacing: -0.03em; line-height: 1.05">{{p.title}}</span>
+              <span style="font-size: 16px; color: #A3A6AD; line-height: 1.45">{{p.short}}</span>
+            </span>
+            <span style="flex: 1 1 200px; font-family: 'JetBrains Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: #8B8F97">{{p.kind}}</span>
+            <span style="display: inline-flex; flex: none; width: 48px; height: 48px; border-radius: 50%; border: 1px solid #2A2D33; align-items: center; justify-content: center; color: {{accent}}; font-family: 'JetBrains Mono', monospace; font-size: 22px">{{p.sign}}</span>
+          </button>
+          <sc-if value="{{p.isOpen}}" hint-placeholder-val="{{ false }}">
+            <div style="display: flex; flex-wrap: wrap; gap: 32px; padding: 0 4px 36px 60px">
+              <p style="flex: 999 1 420px; min-width: 0; margin: 0; font-size: 16px; line-height: 1.65; color: #C9CBD0; max-width: 760px">{{p.desc}}</p>
+              <div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 18px">
+                <div style="display: flex; flex-wrap: wrap; gap: 6px">
+                  <sc-for list="{{p.tech}}" as="tc" hint-placeholder-count="4">
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; padding: 6px 10px; border: 1px solid #2A2D33; border-radius: 999px; color: #C9CBD0">{{tc}}</span>
+                  </sc-for>
+                </div>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px">
+                  <sc-if value="{{p.hasUrl}}" hint-placeholder-val="{{ true }}">
+                    <a class="va-btn" href="{{p.url}}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; background: {{accent}}; color: #0B0C0E; font-size: 14px; font-weight: 600">{{p.host}} ↗</a>
+                  </sc-if>
+                  <sc-if value="{{p.hasMirror}}" hint-placeholder-val="{{ false }}">
+                    <a class="va-btn" href="{{p.mirror}}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #2A2D33; font-size: 14px">{{p.mirrorHost}} ↗</a>
+                  </sc-if>
+                </div>
+              </div>
+            </div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section id="expertise" style="max-width: 1280px; margin: 0 auto; padding: 80px 24px">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: {{accent}}; margin-bottom: 12px">02 / {{t.navExpertise}}</div>
+    <h2 style="margin: 0 0 40px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(40px, 5.5vw, 80px); line-height: 0.95; letter-spacing: -0.04em; max-width: 960px">{{t.expTitleA}} <span style="color: #5A5E66">{{t.expTitleB}}</span></h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px">
+      <div class="va-card" style="min-height: 300px; padding: 32px; border: 1px solid {{accent}}; border-radius: 24px; background: {{accent}}; color: #0B0C0E; display: flex; flex-direction: column; justify-content: space-between; gap: 32px">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start">
+          <svg width="40" height="40" sc-camel-view-box="0 0 24 24" fill="none" stroke="#0B0C0E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px">ai</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 30px; letter-spacing: -0.02em">{{t.spec1}}</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #1E2025">{{t.spec1t}}</p>
+        </div>
+      </div>
+      <div class="va-card" style="min-height: 300px; padding: 32px; border: 1px solid #23262C; border-radius: 24px; background: #111317; display: flex; flex-direction: column; justify-content: space-between; gap: 32px">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start">
+          <svg width="40" height="40" sc-camel-view-box="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7z"></path><path d="M12 22V12M21 7l-9 5-9-5"></path></svg>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8B8F97">3d / webgl</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 30px; letter-spacing: -0.02em">3D / WebGL</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #A3A6AD">{{t.spec2t}}</p>
+        </div>
+      </div>
+      <div class="va-card" style="min-height: 300px; padding: 32px; border: 1px solid #23262C; border-radius: 24px; background: #111317; display: flex; flex-direction: column; justify-content: space-between; gap: 32px">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start">
+          <svg width="40" height="40" sc-camel-view-box="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="6" rx="1.5"></rect><rect x="3" y="15" width="18" height="6" rx="1.5"></rect><path d="M7 6h.01M7 18h.01M12 9v6"></path></svg>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8B8F97">platform</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 30px; letter-spacing: -0.02em">Platform / DevOps</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #A3A6AD">{{t.spec3t}}</p>
+        </div>
+      </div>
+      <div class="va-span3" style="padding: 32px; border: 1px solid #23262C; border-radius: 24px; background: #111317; display: flex; flex-direction: column; gap: 28px">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px">
+          <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 30px; letter-spacing: -0.02em">{{t.canTitle}}</h3>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8B8F97">{{t.canNote}}</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); column-gap: 32px">
+          <sc-for list="{{can}}" as="c" hint-placeholder-count="9">
+            <div style="display: flex; gap: 16px; padding: 16px 0; border-top: 1px solid #23262C">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: {{accent}}; padding-top: 3px">{{c.n}}</span>
+              <span style="font-size: 16px; line-height: 1.5; color: #C9CBD0">{{c.text}}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section id="stack" style="max-width: 1280px; margin: 0 auto; padding: 80px 24px">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: {{accent}}; margin-bottom: 12px">03 / {{t.navStack}}</div>
+    <h2 style="margin: 0 0 40px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(40px, 5.5vw, 80px); line-height: 0.95; letter-spacing: -0.04em">{{t.stackTitle}}</h2>
+    <div style="border-top: 1px solid #23262C">
+      <sc-for list="{{groups}}" as="g" hint-placeholder-count="7">
+        <div style="display: flex; flex-wrap: wrap; gap: 16px 32px; padding: 24px 0; border-bottom: 1px solid #23262C">
+          <div style="flex: 1 1 220px; display: flex; gap: 14px; align-items: baseline">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8B8F97">{{g.n}}</span>
+            <span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 22px; letter-spacing: -0.01em">{{g.label}}</span>
+          </div>
+          <div style="flex: 999 1 520px; min-width: 0; display: flex; flex-wrap: wrap; gap: 8px">
+            <sc-for list="{{g.items}}" as="it" hint-placeholder-count="6">
+              <span class="va-chip" style="font-size: 14px; padding: 8px 14px; border: 1px solid #2A2D33; border-radius: 999px; color: #C9CBD0">{{it}}</span>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #8B8F97">
+      <svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"></circle><path d="M8.5 14L7 22l5-3 5 3-1.5-8"></path></svg>
+      <span>{{t.cert}}</span>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" style="max-width: 1280px; margin: 0 auto; padding: 80px 24px 120px">
+    <div style="border: 1px solid #23262C; border-radius: 32px; background: #111317; padding: clamp(32px, 6vw, 80px); display: flex; flex-direction: column; gap: 40px">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: {{accent}}">04 / {{t.navContact}}</div>
+      <h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(48px, 8vw, 120px); line-height: 0.92; letter-spacing: -0.05em">{{t.contactA}}<br>{{t.contactB}}<span style="color: {{accent}}">.</span></h2>
+      <a href="mailto:dev@reneos.com" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 16px; font-family: 'JetBrains Mono', monospace; font-size: clamp(20px, 3vw, 34px); border-bottom: 2px solid {{accent}}; padding-bottom: 6px">
+        <span style="color: {{accent}}" aria-hidden="true">❯</span>dev@reneos.com
+      </a>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px">
+        <a class="va-card" href="https://t.me/va_dev" target="_blank" rel="noopener" style="display: flex; flex-direction: column; gap: 6px; padding: 22px; border: 1px solid #2A2D33; border-radius: 18px; background: #0B0C0E">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8B8F97">telegram</span>
+          <span style="font-size: 18px; font-weight: 600">@va_dev ↗</span>
+        </a>
+        <a class="va-card" href="mailto:dev@reneos.com" style="display: flex; flex-direction: column; gap: 6px; padding: 22px; border: 1px solid #2A2D33; border-radius: 18px; background: #0B0C0E">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8B8F97">email</span>
+          <span style="font-size: 18px; font-weight: 600">dev@reneos.com ↗</span>
+        </a>
+        <a class="va-card" href="https://github.com/McRain" target="_blank" rel="noopener" style="display: flex; flex-direction: column; gap: 6px; padding: 22px; border: 1px solid #2A2D33; border-radius: 18px; background: #0B0C0E">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8B8F97">github</span>
+          <span style="font-size: 18px; font-weight: 600">McRain ↗</span>
+        </a>
+        <a class="va-card" href="https://habr.com/ru/users/McRain/" target="_blank" rel="noopener" style="display: flex; flex-direction: column; gap: 6px; padding: 22px; border: 1px solid #2A2D33; border-radius: 18px; background: #0B0C0E">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8B8F97">habr</span>
+          <span style="font-size: 18px; font-weight: 600">McRain ↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid #1E2025">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #8B8F97">
+      <span>© 2026 {{t.first}} {{t.last}}</span>
+      <span>iam.reneos.com</span>
+      <a href="#top" style="color: #8B8F97">{{t.top}} ↑</a>
+    </div>
+  </footer>
+</div>
+<sc-if data-dc-static="" value="{{ false }}"><style>x-dc>*{display:none!important}x-dc>[data-dc-static]{display:block!important}</style>
+
+
+<div style="background: #0B0C0E; color: #F2F1EC; font-family: 'Instrument Sans', system-ui, sans-serif; min-height: 100vh; overflow-x: hidden" data-canvas-width="1440" data-canvas-height="5600">
+
+  
+  <header style="position: sticky; top: 0; z-index: 10; background: rgba(11,12,14,0.82); backdrop-filter: blur(14px); border-bottom: 1px solid #1E2025">
+    <nav style="max-width: 1280px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+      <a href="#top" style="display: flex; align-items: center; gap: 10px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 22px; letter-spacing: -0.02em">
+        <span style="display: inline-flex; width: 36px; height: 36px; border-radius: 10px; background: #C6F432; color: #0B0C0E; align-items: center; justify-content: center; font-size: 15px">VA</span>
+        <span>abdulov<span style="color: #C6F432">.</span></span>
+      </a>
+      <div class="va-hide-sm" style="display: flex; gap: 32px; font-family: 'JetBrains Mono', monospace; font-size: 13px">
+        <a href="#work" style="color: #A3A6AD">01 / {{t.navWork}}</a>
+        <a href="#expertise" style="color: #A3A6AD">02 / {{t.navExpertise}}</a>
+        <a href="#stack" style="color: #A3A6AD">03 / {{t.navStack}}</a>
+        <a href="#contact" style="color: #A3A6AD">04 / {{t.navContact}}</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div role="group" aria-label="Language" style="display: inline-flex; padding: 3px; border: 1px solid #2A2D33; border-radius: 999px">
+          
+            
+              <button aria-pressed="true" style="min-width: 44px; min-height: 38px; border: 0; border-radius: 999px; background: #F2F1EC; color: #0B0C0E; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; cursor: pointer">{{l.label}}</button>
+            
+            
+              <button aria-pressed="false" style="min-width: 44px; min-height: 38px; border: 0; border-radius: 999px; background: transparent; color: #A3A6AD; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; cursor: pointer">{{l.label}}</button>
+            
+          
+        </div>
+        <a class="va-btn va-hide-sm" href="https://t.me/va_dev" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; background: #C6F432; color: #0B0C0E; font-size: 14px; font-weight: 600">{{t.navCta}}</a>
+      </div>
+    </nav>
+  </header>
+
+  
+  <section id="top" style="max-width: 1280px; margin: 0 auto; padding: 96px 24px 72px; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-end">
+    <div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #A3A6AD">{{t.heroLabel}}</div>
+      <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(56px, 9vw, 136px); line-height: 0.9; letter-spacing: -0.045em">{{t.first}}<br>{{t.last}}<span style="color: #C6F432">_</span></h1>
+      <p style="margin: 0; max-width: 600px; font-size: clamp(18px, 1.6vw, 21px); line-height: 1.55; color: #C9CBD0">{{t.lead}}</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px">
+        <a class="va-btn" href="#work" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 999px; background: #C6F432; color: #0B0C0E; font-weight: 600; font-size: 16px">
+          {{t.ctaWork}}
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg>
+        </a>
+        <a class="va-btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 999px; border: 1px solid #2A2D33; font-weight: 500; font-size: 16px">{{t.ctaContact}}</a>
+      </div>
+    </div>
+
+    <div style="flex: 1 1 400px; min-width: 0; border: 1px solid #23262C; border-radius: 20px; background: #111317; overflow: hidden; box-shadow: 0 40px 80px -40px rgba(0,0,0,0.8)">
+      <div style="display: flex; align-items: center; gap: 8px; padding: 14px 18px; border-bottom: 1px solid #1E2025">
+        <span style="width: 11px; height: 11px; border-radius: 50%; background: #3A3D44"></span>
+        <span style="width: 11px; height: 11px; border-radius: 50%; background: #3A3D44"></span>
+        <span style="width: 11px; height: 11px; border-radius: 50%; background: #3A3D44"></span>
+        <span style="margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8B8F97">~/viktor — zsh</span>
+      </div>
+      <div style="padding: 22px; font-family: 'JetBrains Mono', monospace; font-size: 14px; line-height: 1.85; color: #8B8F97">
+        <div style="color: #C9CBD0"><span style="color: #C6F432">❯</span> whoami --stack</div>
+        
+          <div style="display: flex; gap: 12px"><span style="width: 56px; flex: none">{{r.k}}</span><span style="color: #F2F1EC">{{r.v}}</span></div>
+        
+        <div style="margin-top: 8px"><span style="color: #C6F432">❯</span> <span class="va-caret" style="display: inline-block; width: 9px; height: 17px; background: #F2F1EC; vertical-align: -3px"></span></div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section style="max-width: 1280px; margin: 0 auto; padding: 0 24px 80px">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); border-top: 1px solid #1E2025; border-bottom: 1px solid #1E2025">
+      
+        <div style="padding: 28px 0; display: flex; flex-direction: column; gap: 6px">
+          <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 48px; letter-spacing: -0.03em">{{s.n}}</div>
+          <div style="font-size: 15px; color: #A3A6AD">{{s.l}}</div>
+        </div>
+      
+    </div>
+  </section>
+
+  
+  <section aria-label="Core stack" style="border-top: 1px solid #1E2025; border-bottom: 1px solid #1E2025; padding: 26px 0; overflow: hidden; background: #0E0F12">
+    <div class="va-track" style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: clamp(28px, 4vw, 52px); letter-spacing: -0.03em; color: #5A5E66; white-space: nowrap">
+      
+        <span style="display: inline-flex; align-items: center; gap: 56px">{{s}}<span style="color: #C6F432">✳</span></span>
+      
+    </div>
+  </section>
+
+  
+  <section id="work" style="max-width: 1280px; margin: 0 auto; padding: 120px 24px 80px">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 40px">
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #C6F432">01 / {{t.navWork}}</div>
+        <h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(40px, 5.5vw, 80px); line-height: 0.95; letter-spacing: -0.04em">{{t.workTitle}}</h2>
+      </div>
+      <div role="group" aria-label="Filter projects" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 720px">
+        
+          
+            <button aria-pressed="true" style="min-height: 44px; padding: 0 16px; border-radius: 999px; cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 13px; background: #C6F432; color: #0B0C0E; border: 1px solid #C6F432">{{f.label}} <span style="opacity: 0.6">{{f.count}}</span></button>
+          
+          
+            <button aria-pressed="false" style="min-height: 44px; padding: 0 16px; border-radius: 999px; cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 13px; background: transparent; color: #C9CBD0; border: 1px solid #2A2D33">{{f.label}} <span style="color: #8B8F97">{{f.count}}</span></button>
+          
+        
+      </div>
+    </div>
+
+    <div style="border-top: 1px solid #23262C">
+      
+        <div style="border-bottom: 1px solid #23262C">
+          <button class="va-row" style="width: 100%; display: flex; flex-wrap: wrap; align-items: center; gap: 24px; padding: 28px 4px; background: transparent; border: 0; color: #F2F1EC; text-align: left; cursor: pointer; font: inherit">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #8B8F97; width: 32px">{{p.num}}</span>
+            <span style="flex: 999 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+              <span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: clamp(26px, 3vw, 40px); letter-spacing: -0.03em; line-height: 1.05">{{p.title}}</span>
+              <span style="font-size: 16px; color: #A3A6AD; line-height: 1.45">{{p.short}}</span>
+            </span>
+            <span style="flex: 1 1 200px; font-family: 'JetBrains Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: #8B8F97">{{p.kind}}</span>
+            <span style="display: inline-flex; flex: none; width: 48px; height: 48px; border-radius: 50%; border: 1px solid #2A2D33; align-items: center; justify-content: center; color: #C6F432; font-family: 'JetBrains Mono', monospace; font-size: 22px">{{p.sign}}</span>
+          </button>
+          
+            <div style="display: flex; flex-wrap: wrap; gap: 32px; padding: 0 4px 36px 60px">
+              <p style="flex: 999 1 420px; min-width: 0; margin: 0; font-size: 16px; line-height: 1.65; color: #C9CBD0; max-width: 760px">{{p.desc}}</p>
+              <div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 18px">
+                <div style="display: flex; flex-wrap: wrap; gap: 6px">
+                  
+                    <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; padding: 6px 10px; border: 1px solid #2A2D33; border-radius: 999px; color: #C9CBD0">{{tc}}</span>
+                  
+                </div>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px">
+                  
+                    <a class="va-btn" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; background: #C6F432; color: #0B0C0E; font-size: 14px; font-weight: 600">{{p.host}} ↗</a>
+                  
+                  
+                    <a class="va-btn" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #2A2D33; font-size: 14px">{{p.mirrorHost}} ↗</a>
+                  
+                </div>
+              </div>
+            </div>
+          
+        </div>
+      
+    </div>
+  </section>
+
+  
+  <section id="expertise" style="max-width: 1280px; margin: 0 auto; padding: 80px 24px">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #C6F432; margin-bottom: 12px">02 / {{t.navExpertise}}</div>
+    <h2 style="margin: 0 0 40px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(40px, 5.5vw, 80px); line-height: 0.95; letter-spacing: -0.04em; max-width: 960px">{{t.expTitleA}} <span style="color: #5A5E66">{{t.expTitleB}}</span></h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px">
+      <div class="va-card" style="min-height: 300px; padding: 32px; border: 1px solid #C6F432; border-radius: 24px; background: #C6F432; color: #0B0C0E; display: flex; flex-direction: column; justify-content: space-between; gap: 32px">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0B0C0E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px">ai</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 30px; letter-spacing: -0.02em">{{t.spec1}}</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #1E2025">{{t.spec1t}}</p>
+        </div>
+      </div>
+      <div class="va-card" style="min-height: 300px; padding: 32px; border: 1px solid #23262C; border-radius: 24px; background: #111317; display: flex; flex-direction: column; justify-content: space-between; gap: 32px">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C6F432" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7z"></path><path d="M12 22V12M21 7l-9 5-9-5"></path></svg>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8B8F97">3d / webgl</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 30px; letter-spacing: -0.02em">3D / WebGL</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #A3A6AD">{{t.spec2t}}</p>
+        </div>
+      </div>
+      <div class="va-card" style="min-height: 300px; padding: 32px; border: 1px solid #23262C; border-radius: 24px; background: #111317; display: flex; flex-direction: column; justify-content: space-between; gap: 32px">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C6F432" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="6" rx="1.5"></rect><rect x="3" y="15" width="18" height="6" rx="1.5"></rect><path d="M7 6h.01M7 18h.01M12 9v6"></path></svg>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8B8F97">platform</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 30px; letter-spacing: -0.02em">Platform / DevOps</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #A3A6AD">{{t.spec3t}}</p>
+        </div>
+      </div>
+      <div class="va-span3" style="padding: 32px; border: 1px solid #23262C; border-radius: 24px; background: #111317; display: flex; flex-direction: column; gap: 28px">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px">
+          <h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 30px; letter-spacing: -0.02em">{{t.canTitle}}</h3>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8B8F97">{{t.canNote}}</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); column-gap: 32px">
+          
+            <div style="display: flex; gap: 16px; padding: 16px 0; border-top: 1px solid #23262C">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #C6F432; padding-top: 3px">{{c.n}}</span>
+              <span style="font-size: 16px; line-height: 1.5; color: #C9CBD0">{{c.text}}</span>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="stack" style="max-width: 1280px; margin: 0 auto; padding: 80px 24px">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #C6F432; margin-bottom: 12px">03 / {{t.navStack}}</div>
+    <h2 style="margin: 0 0 40px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(40px, 5.5vw, 80px); line-height: 0.95; letter-spacing: -0.04em">{{t.stackTitle}}</h2>
+    <div style="border-top: 1px solid #23262C">
+      
+        <div style="display: flex; flex-wrap: wrap; gap: 16px 32px; padding: 24px 0; border-bottom: 1px solid #23262C">
+          <div style="flex: 1 1 220px; display: flex; gap: 14px; align-items: baseline">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8B8F97">{{g.n}}</span>
+            <span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 22px; letter-spacing: -0.01em">{{g.label}}</span>
+          </div>
+          <div style="flex: 999 1 520px; min-width: 0; display: flex; flex-wrap: wrap; gap: 8px">
+            
+              <span class="va-chip" style="font-size: 14px; padding: 8px 14px; border: 1px solid #2A2D33; border-radius: 999px; color: #C9CBD0">{{it}}</span>
+            
+          </div>
+        </div>
+      
+    </div>
+    <div style="margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #8B8F97">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C6F432" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"></circle><path d="M8.5 14L7 22l5-3 5 3-1.5-8"></path></svg>
+      <span>{{t.cert}}</span>
+    </div>
+  </section>
+
+  
+  <section id="contact" style="max-width: 1280px; margin: 0 auto; padding: 80px 24px 120px">
+    <div style="border: 1px solid #23262C; border-radius: 32px; background: #111317; padding: clamp(32px, 6vw, 80px); display: flex; flex-direction: column; gap: 40px">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #C6F432">04 / {{t.navContact}}</div>
+      <h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(48px, 8vw, 120px); line-height: 0.92; letter-spacing: -0.05em">{{t.contactA}}<br>{{t.contactB}}<span style="color: #C6F432">.</span></h2>
+      <a href="mailto:dev@reneos.com" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 16px; font-family: 'JetBrains Mono', monospace; font-size: clamp(20px, 3vw, 34px); border-bottom: 2px solid #C6F432; padding-bottom: 6px">
+        <span style="color: #C6F432" aria-hidden="true">❯</span>dev@reneos.com
+      </a>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px">
+        <a class="va-card" href="https://t.me/va_dev" target="_blank" rel="noopener" style="display: flex; flex-direction: column; gap: 6px; padding: 22px; border: 1px solid #2A2D33; border-radius: 18px; background: #0B0C0E">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8B8F97">telegram</span>
+          <span style="font-size: 18px; font-weight: 600">@va_dev ↗</span>
+        </a>
+        <a class="va-card" href="mailto:dev@reneos.com" style="display: flex; flex-direction: column; gap: 6px; padding: 22px; border: 1px solid #2A2D33; border-radius: 18px; background: #0B0C0E">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8B8F97">email</span>
+          <span style="font-size: 18px; font-weight: 600">dev@reneos.com ↗</span>
+        </a>
+        <a class="va-card" href="https://github.com/McRain" target="_blank" rel="noopener" style="display: flex; flex-direction: column; gap: 6px; padding: 22px; border: 1px solid #2A2D33; border-radius: 18px; background: #0B0C0E">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8B8F97">github</span>
+          <span style="font-size: 18px; font-weight: 600">McRain ↗</span>
+        </a>
+        <a class="va-card" href="https://habr.com/ru/users/McRain/" target="_blank" rel="noopener" style="display: flex; flex-direction: column; gap: 6px; padding: 22px; border: 1px solid #2A2D33; border-radius: 18px; background: #0B0C0E">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8B8F97">habr</span>
+          <span style="font-size: 18px; font-weight: 600">McRain ↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid #1E2025">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #8B8F97">
+      <span>© 2026 {{t.first}} {{t.last}}</span>
+      <span>iam.reneos.com</span>
+      <a href="#top" style="color: #8B8F97">{{t.top}} ↑</a>
+    </div>
+  </footer>
+</div>
+</sc-if></x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#C6F432&quot;,&quot;options&quot;:[&quot;#C6F432&quot;,&quot;#5CE1E6&quot;,&quot;#FF8A4C&quot;,&quot;#B9A3FF&quot;]},&quot;lang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;en&quot;,&quot;ru&quot;],&quot;default&quot;:&quot;en&quot;},&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:5600}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { filter: 'all', open: 'Reneos Cloud', lang: null };
+  }
+  renderVals() {
+    const accent = this.props.accent ?? '#C6F432';
+    const lang = this.state.lang ?? this.props.lang ?? 'en';
+    const T = {
+      en: {
+        navWork: 'work', navExpertise: 'expertise', navStack: 'stack', navContact: 'contact', navCta: 'Write on Telegram',
+        heroLabel: '// fullstack developer — Node.js & Vue 3',
+        first: 'Viktor', last: 'Abdulov',
+        lead: 'I build products end to end — from backend and infrastructure (Kubernetes / GitOps) to 3D frontend and AI integrations — and ship them to production with CI/CD.',
+        ctaWork: 'See projects', ctaContact: 'Get in touch',
+        sProjects: 'projects in the portfolio', sTech: 'technologies in the stack', sAreas: 'areas of expertise', sOne: 'developer, front to back',
+        workTitle: 'Things I’ve built', all: 'All',
+        expTitleA: 'The whole stack,', expTitleB: 'one owner.',
+        spec1: 'AI engineering',
+        spec1t: 'RAG and semantic search (pgvector), MCP tooling for AI agents, LLM integrations (Gemini / OpenAI), incremental knowledge base synchronization.',
+        spec2t: 'Three.js, a custom IFC parser for models with hundreds of thousands of objects, Module Federation for independently deployable modules.',
+        spec3t: 'Kubernetes, ArgoCD (GitOps), Helm, HashiCorp Vault, microservice architecture, observability (OpenTelemetry / SigNoz).',
+        canTitle: 'What I can build', canNote: '9 directions',
+        stackTitle: 'Tools of the trade',
+        cert: 'Qualification — INTUIT.ru certificate No. 101753376',
+        contactA: 'Let’s build', contactB: 'something', top: 'back to top'
+      },
+      ru: {
+        navWork: 'проекты', navExpertise: 'экспертиза', navStack: 'навыки', navContact: 'контакты', navCta: 'Написать в Telegram',
+        heroLabel: '// fullstack-разработчик — Node.js и Vue 3',
+        first: 'Виктор', last: 'Абдулов',
+        lead: 'Делаю продукты целиком — от backend и инфраструктуры (Kubernetes / GitOps) до 3D-фронтенда и AI-интеграций; довожу до прода с CI/CD.',
+        ctaWork: 'Смотреть проекты', ctaContact: 'Связаться',
+        sProjects: 'проектов в портфолио', sTech: 'технологии в стеке', sAreas: 'направлений экспертизы', sOne: 'разработчик — от бэка до фронта',
+        workTitle: 'Что я построил', all: 'Все',
+        expTitleA: 'Весь стек —', expTitleB: 'в одних руках.',
+        spec1: 'AI-инжиниринг',
+        spec1t: 'RAG и семантический поиск (pgvector), MCP-инструментарий для AI-агентов, интеграции LLM (Gemini / OpenAI), инкрементальная синхронизация баз знаний.',
+        spec2t: 'Three.js, собственный IFC-парсер под модели в сотни тысяч объектов, Module Federation для независимо разворачиваемых модулей.',
+        spec3t: 'Kubernetes, ArgoCD (GitOps), Helm, HashiCorp Vault, микросервисная архитектура, наблюдаемость (OpenTelemetry / SigNoz).',
+        canTitle: 'Что могу сделать', canNote: '9 направлений',
+        stackTitle: 'Инструменты',
+        cert: 'Квалификация — удостоверение INTUIT.ru №101753376',
+        contactA: 'Давайте', contactB: 'построим', top: 'наверх'
+      }
+    };
+    const t = T[lang];
+    const L = (o) => (typeof o === 'string' ? o : (o[lang] ?? o.en));
+
+    const topicLabels = {
+      platforms: { en: 'Platforms', ru: 'Платформы' }, backend: 'Backend', ai: 'AI', realtime: 'Realtime',
+      webgl: '3D / WebGL', devops: 'DevOps', tools: { en: 'Tools', ru: 'Инструменты' }, web3: 'Web3'
+    };
+
+    const P = [
+      { title: 'Reneos Cloud', kind: { en: 'Platform / SaaS', ru: 'Платформа / SaaS' }, topics: ['platforms', 'backend'], url: 'https://portal.reneos.com/',
+        short: { en: 'A privacy-first alternative to Google Workspace and Microsoft 365.', ru: 'Приватная альтернатива Google Workspace и Microsoft 365.' },
+        desc: { en: 'A full alternative to Google Workspace and Microsoft 365 with a focus on privacy: mail, calendar, files and a task tracker in one window. Every team gets an isolated installation — its data and its domain stay under its own control. I designed and built the entire platform, from infrastructure to interface; betting on open standards rules out vendor lock-in.',
+          ru: 'Полноценная альтернатива Google Workspace и Microsoft 365 с упором на приватность: почта, календарь, файлы и трекер задач в одном окне. Каждой команде — изолированная инсталляция, данные и домен остаются под её контролем. Спроектировал и собрал платформу целиком, от инфраструктуры до интерфейса; ставка на открытые стандарты исключает привязку к вендору.' },
+        tech: ['Node.js', 'Vue 3', 'PostgreSQL', 'OIDC', 'IMAP/SMTP', 'CalDAV', 'Kubernetes'] },
+      { title: 'TaskFlow', kind: { en: 'Platform / SaaS', ru: 'Платформа / SaaS' }, topics: ['platforms', 'backend', 'realtime'], url: 'https://taktom.ru/', mirror: 'https://task.reneos.com/',
+        short: { en: 'Task tracker and service desk in one — an alternative to Jira + JSM.', ru: 'Трекер задач и Service Desk в одном — альтернатива Jira + JSM.' },
+        desc: { en: 'A task tracking system and a customer service desk in a single installation — an alternative to Jira plus Jira Service Management. The core holds only federated entities, while all the functionality — workflow, search, SLA, reports, dashboards, customer portals — plugs in as extensions: Apollo Federation on the backend and Module Federation on the frontend, so new modules are added without rewriting the core. I designed and built the whole platform — from the event contract and the transactional outbox to real-time over SSE and presence.',
+          ru: 'Система ведения задач и клиентского Service Desk в одной инсталляции — альтернатива связке Jira + Jira Service Management. Ядро держит только федеративные сущности, а весь функционал — workflow, поиск, SLA, отчёты, дашборды, клиентские порталы — подключается плагинами: Apollo Federation на бэкенде и Module Federation на фронте, так что новые модули добавляются без переписывания ядра. Спроектировал и собрал платформу целиком — от event-контракта и transactional outbox до real-time через SSE и presence.' },
+        tech: ['Node.js', 'Vue 3', 'GraphQL Federation', 'PostgreSQL', 'NATS', 'Module Federation', 'Docker'] },
+      { title: 'AITeam', kind: { en: 'AI / Platform', ru: 'AI / Платформа' }, topics: ['ai', 'platforms', 'backend'], url: 'https://ctoai.ru/',
+        short: { en: 'An orchestrator of AI agents with a human in the loop.', ru: 'Оркестратор AI-агентов с человеком в контуре.' },
+        desc: { en: 'An orchestrator of AI agents that handles incoming requests with a human in the loop. Tasks arrive from webhooks (Jira, GitHub), Slack, Telegram and mailboxes; a classifier picks a specialized agent, and the agent turns the request into a structured decision — which flow to run and with what arguments. The approval reaches several channels at once, and a decision made in any of them is reflected in all the others; execution starts only afterwards and is done by a separate worker with no access to the model. The installation is multi-tenant, and every organization gets its own MCP server — so connectors, agents and flows can be assembled by an external AI client as well as by a human.',
+          ru: 'Оркестратор AI-агентов, разбирающий входящие обращения с человеком в контуре. Задачи приходят из вебхуков (Jira, GitHub), Slack, Telegram и почтовых ящиков; классификатор выбирает специализированного агента, а тот превращает обращение в структурированное решение — какой флоу запустить и с какими аргументами. Аппрув приходит сразу в несколько каналов, и решение, принятое в любом из них, отражается во всех остальных; выполнение начинается только после этого и делает его отдельный воркер, у которого нет доступа к модели. Установка мультитенантная, а у каждой организации есть собственный MCP-сервер — собирать коннекторы, агентов и флоу может не только человек, но и внешний ИИ-клиент.' },
+        tech: ['Rust', 'axum', 'Vue 3', 'PostgreSQL', 'MCP', 'Slack / Telegram', 'Docker'] },
+      { title: 'Runflow', kind: { en: 'Platform / Automation', ru: 'Платформа / Автоматизация' }, topics: ['platforms', 'backend', 'devops'], url: 'https://runflo.ru/',
+        short: { en: 'A multi-tenant integration hub written in Rust.', ru: 'Мультитенантный интеграционный хаб на Rust.' },
+        desc: { en: 'A multi-tenant integration hub written in Rust — an answer to “many isolated clients on one installation, each on its own plan”. The tenant is the primary entity: its own database schema, its own Postgres role, its own encryption key and its own worker process, started under a separate uid and cgroup. The core carries no integrations at all, so an idle installation costs tens of megabytes instead of the hundreds a Node monolith needs, and plan limits stop a heavy run with a clear error instead of an out-of-memory heap. Flows are drawn in a browser editor, and third-party nodes plug in through a published Node API.',
+          ru: 'Мультитенантный интеграционный хаб на Rust — ответ на сценарий «много изолированных клиентов на одной установке, каждому свой тариф». Тенант здесь — первичная сущность: своя схема БД, своя роль Postgres, свой ключ шифрования и свой процесс-воркер, запускаемый под отдельным uid и cgroup. Ядро не содержит ни одной интеграции, поэтому установка на холостом ходу стоит десятки мегабайт вместо сотен, которые нужны Node-монолиту, а тяжёлый прогон обрывается внятной ошибкой по лимиту тарифа, а не падением по памяти. Флоу рисуются в браузерном редакторе, сторонние ноды подключаются по опубликованному Node API.' },
+        tech: ['Rust', 'Vue 3', 'PostgreSQL', 'cgroups / namespaces', 'Docker'] },
+      { title: 'Stats', kind: { en: 'Analytics / SaaS', ru: 'Аналитика / SaaS' }, topics: ['platforms', 'backend'], url: 'https://analytics.taktom.ru/',
+        short: { en: 'Self-hosted web analytics with no personal data by default.', ru: 'Веб-аналитика на своём сервере без персональных данных по умолчанию.' },
+        desc: { en: 'Web analytics for your own sites on your own server — a replacement for Google Analytics. By default no personal data comes into existence at all: no IP, no user-agent, no cookies, no identifiers in the browser; everything that is useful for analytics but counts as personal data is switched on by separate flags. The reports cover visits, sources and UTM, geography and networks, custom events, goals with conversion, funnels, weekly cohorts and page speed (LCP, INP, CLS) — and any cell of any breakdown turns into a report filter in one click. Backend in Rust, dashboard in Vue 3, raw events in partitioned Postgres with automatic retention.',
+          ru: 'Веб-аналитика для своих сайтов на своём сервере — замена Google Analytics. По умолчанию персональные данные не возникают вовсе: ни IP, ни user-agent, ни cookie, ни идентификаторов в браузере; всё, что полезно для аналитики, но является персональными данными, включается отдельными флагами. В отчётах — визиты, источники и UTM, гео и сети, кастомные события, цели с конверсией, воронки, недельные когорты и скорость страниц (LCP, INP, CLS), и любой элемент любого среза одним кликом превращается в фильтр отчёта. Бэкенд на Rust, дашборд на Vue 3, сырые события — в партиционированном Postgres с автоматическим сроком хранения.' },
+        tech: ['Rust', 'Vue 3', 'PostgreSQL', 'Web Vitals', 'Docker', 'Nginx'] },
+      { title: 'BIMView', kind: '3D / WebGL', topics: ['webgl', 'backend'], url: 'https://bim.reneos.com/',
+        short: { en: 'BIM/IFC models with hundreds of thousands of objects, in the browser.', ru: 'BIM/IFC-модели в сотни тысяч объектов прямо в браузере.' },
+        desc: { en: 'Viewing and analyzing BIM/IFC construction models right in the browser — without expensive desktop software and without installation. Performance was the main challenge: I wrote a custom IFC parser and rendering engine that smoothly handle models with hundreds of thousands of objects, with navigation, filtering and access to the metadata of every element.',
+          ru: 'Просмотр и анализ строительных BIM/IFC-моделей прямо в браузере — без дорогого десктопного ПО и установки. Главный вызов — производительность: написал собственный IFC-парсер и движок рендеринга, которые плавно тянут модели в сотни тысяч объектов с навигацией, фильтрацией и доступом к метаданным каждого элемента.' },
+        tech: ['Vue 3', 'Three.js', 'WebGL', 'IFC', 'Node.js'] },
+      { title: 'Rakursa', kind: '3D / WebGL', topics: ['webgl', 'platforms'], url: 'https://rakursa.ru/',
+        short: { en: 'A no-code builder for interactive 3D scenes, tours and AR/VR.', ru: 'Конструктор интерактивных 3D-сцен, туров и AR/VR без кода.' },
+        desc: { en: 'A builder for interactive 3D scenes: virtual tours, presentations, AR/VR environments, 3D product cards and broadcast studios — with no programming. The “core plus plugins” architecture makes it possible to grow the toolset (animations, particles, charts, GUI) to fit the client’s needs; the editor and the player are split into separate applications.',
+          ru: 'Конструктор интерактивных 3D-сцен: виртуальные туры, презентации, AR/VR-окружения, 3D-карточки товаров и студии вещания — без программирования. Архитектура «ядро + плагины» позволяет наращивать инструменты (анимации, частицы, графики, GUI) под задачи клиента; редактор и плеер вынесены в отдельные приложения.' },
+        tech: ['Vue 3', 'Three.js', 'WebGL', 'PWA', 'Node.js'] },
+      { title: 'BitBot', kind: 'Backend / Realtime', topics: ['backend', 'realtime', 'ai'], url: 'https://bitbot.reneos.com/',
+        short: { en: 'A visual strategy builder for automated Binance trading.', ru: 'Визуальный конструктор стратегий для автоторговли на Binance.' },
+        desc: { en: 'An automated trading platform for Binance: the user assembles a strategy in a visual builder out of blocks — indicators, conditions, actions — without a single line of code. The hardest part stays out of sight: processing exchange events in real time, restoring positions after failures and storing keys securely. DCA and AI strategies are available out of the box.',
+          ru: 'Платформа автоматической торговли на Binance: пользователь собирает стратегию в визуальном конструкторе из блоков — индикаторы, условия, действия — без единой строки кода. Самое сложное здесь скрыто от глаз: обработка биржевых событий в реальном времени, восстановление позиций после сбоев и безопасное хранение ключей. DCA- и AI-стратегии доступны из коробки.' },
+        tech: ['Node.js', 'Vue 3', 'WebSocket', 'MongoDB', 'Binance API', 'Docker'] },
+      { title: 'Help Desk', kind: 'AI / RAG', topics: ['ai', 'backend'],
+        short: { en: 'An AI support assistant in Slack, answering from Confluence and Notion.', ru: 'AI-ассистент поддержки в Slack с ответами по Confluence и Notion.' },
+        desc: { en: 'An AI support assistant for employees right inside Slack: ask a question and the bot finds the answer in corporate knowledge bases (Confluence, Notion) and replies with links to the sources, taking load off the support team. Built on semantic search (RAG) over Google Gemini — it answers strictly from verified internal documents instead of making things up.',
+          ru: 'ИИ-ассистент поддержки сотрудников прямо в Slack: задаёшь вопрос — бот находит ответ в корпоративных базах знаний (Confluence, Notion) и отвечает со ссылками на источники, снимая нагрузку с команды поддержки. Построен на семантическом поиске (RAG) поверх Google Gemini — отвечает только по проверенным внутренним документам, а не фантазирует.' },
+        tech: ['Node.js', 'Google Gemini', 'RAG', 'Slack', 'Confluence', 'Notion', 'Docker'] },
+      { title: 'SysOps Tools', kind: { en: 'Platform / DevOps', ru: 'Платформа / DevOps' }, topics: ['platforms', 'devops', 'backend', 'ai'],
+        short: { en: 'One window for the ops team instead of a dozen tools.', ru: 'Единое окно для команды эксплуатации вместо десятка инструментов.' },
+        desc: { en: 'An internal platform for the operations team — a single window instead of a dozen scattered tools. From one interface with corporate SSO login the team manages Google Workspace accounts, monitors the health of Kubernetes clusters, handles user requests from Telegram and Slack and sends out notifications. Routine operations that used to require manual work across different systems now take a couple of clicks, and AI agents help answer common support requests. The platform is extended with plugins for new tasks without rewriting the core.',
+          ru: 'Внутренняя платформа для команды эксплуатации — единое окно вместо десятка разрозненных инструментов. Из одного интерфейса со входом по корпоративному SSO команда управляет аккаунтами Google Workspace, следит за состоянием кластеров Kubernetes, обрабатывает обращения пользователей из Telegram и Slack и рассылает уведомления. Рутинные операции, которые раньше требовали ручной работы в разных системах, делаются в пару кликов, а AI-агенты помогают отвечать на типовые запросы поддержки. Платформа расширяется плагинами под новые задачи без переписывания ядра.' },
+        tech: ['Node.js', 'Vue 3', 'Kubernetes', 'Google Workspace', 'Slack', 'Telegram', 'SSO / OIDC', 'Docker'] },
+      { title: 'Autent', kind: { en: 'Backend / Auth', ru: 'Backend / Авторизация' }, topics: ['backend', 'devops', 'tools'],
+        short: { en: 'An auth microservice built from hot-reloadable visual flows.', ru: 'Микросервис авторизации из визуальных флоу с горячей перезагрузкой.' },
+        desc: { en: 'An authentication and authorization microservice that stands in front of an application through nginx auth_request. Every route here is a flow — a graph of small nodes that runs from the request to the response: read the headers, ask the auth backend, sign a JWT, set a cookie, or answer 401 on a branch of its own. Flows are JSON files edited in a visual editor, and the running service picks up the changes without a restart or a recompile; a node may carry its own JavaScript, executed in a sandboxed QuickJS with memory and time limits. A Rust port of my own Node service @reneos/auth.',
+          ru: 'Микросервис аутентификации и авторизации, который встаёт перед приложением через nginx auth_request. Каждый маршрут здесь — флоу, граф небольших нод, проходимый от запроса к ответу: прочитать заголовки, сходить в бэкенд авторизации, подписать JWT, поставить куку или ответить 401 на отдельной ветке. Флоу — JSON-файлы, которые правятся в визуальном редакторе, и рабочий сервис подхватывает изменения без перезапуска и перекомпиляции; нода может нести собственный JavaScript, исполняемый в песочнице QuickJS с лимитами памяти и времени. Rust-порт собственного Node-сервиса @reneos/auth.' },
+        tech: ['Rust', 'axum', 'Vue 3', 'Vue Flow', 'QuickJS', 'JWT', 'nginx auth_request', 'Docker'] },
+      { title: 'Screen Recorder Studio', kind: { en: 'Browser extension', ru: 'Браузерное расширение' }, topics: ['tools'], url: 'https://chromewebstore.google.com/detail/screen-recorder-studio/elkbglejmjpldoaimbldmlkjnpddacjc',
+        short: { en: 'Local, offline screen recording up to 60 fps. On the Chrome Web Store.', ru: 'Запись экрана локально и офлайн, до 60 fps. В Chrome Web Store.' },
+        desc: { en: 'A Chrome extension for high-quality screen recording — the whole screen, a window or a tab — with system and microphone audio mixed into a single track. Everything runs locally in the browser, offline, with no accounts, watermarks or uploads to any server. Saves to MP4 (H.264) or WebM (VP9/VP8/AV1) at up to 60 fps straight into the chosen folder without a save dialog; pause without splitting the file, live preview and a built-in player. Published on the Chrome Web Store.',
+          ru: 'Расширение для Chrome: запись экрана в высоком качестве — весь экран, окно или вкладка — со звуком системы и микрофона, смикшированными в одну дорожку. Всё работает локально в браузере, офлайн, без аккаунтов, водяных знаков и загрузки на серверы. Сохранение в MP4 (H.264) или WebM (VP9/VP8/AV1) до 60 fps сразу в выбранную папку без диалога сохранения; пауза без разбиения файла, живой предпросмотр и встроенный плеер. Опубликовано в Chrome Web Store.' },
+        tech: ['JavaScript', 'Chrome Extensions (MV3)', 'MediaRecorder', 'Screen Capture API', 'Web Audio', 'File System Access'] },
+      { title: 'Proxy Bypass', kind: { en: 'Browser extension', ru: 'Браузерное расширение' }, topics: ['tools'],
+        short: { en: 'Selective per-site routing through your own proxy, for Chrome.', ru: 'Выборочная маршрутизация сайтов через свой прокси в Chrome.' },
+        desc: { en: 'A Chrome extension (Manifest V3) that routes traffic from selected sites through your own proxy server — SOCKS5, SOCKS4, HTTPS or HTTP. Selective mode: only the domains on the list go through the proxy, everything else goes direct; the PAC script is generated on the fly via chrome.proxy. Ships with ready-made domain sets (YouTube, Telegram, Discord and more), a bypass list, port exclusions and a compact popup for configuration.',
+          ru: 'Расширение для Chrome (Manifest V3), направляющее трафик выбранных сайтов через собственный прокси-сервер — SOCKS5, SOCKS4, HTTPS или HTTP. Селективный режим: проксируются только домены из списка, остальной трафик идёт напрямую; PAC-скрипт генерируется на лету через chrome.proxy. Из коробки — готовые наборы доменов (YouTube, Telegram, Discord и др.), bypass-список и исключения по портам, настройка в компактном попапе.' },
+        tech: ['JavaScript', 'Chrome Extensions (MV3)', 'chrome.proxy / PAC', 'SOCKS5'] },
+      { title: 'Vaultwarden API', kind: 'Backend / API', topics: ['backend', 'devops'],
+        short: { en: 'Onboarding and offboarding automation for Vaultwarden.', ru: 'Автоматизация онбординга и увольнения в Vaultwarden.' },
+        desc: { en: 'An automation service for the corporate password manager Vaultwarden (self-hosted Bitwarden). It covers the administrative routine: creating and removing employees, managing access groups and the full onboarding of a new user in a single request. It lets password management be wired into the general hiring and offboarding processes instead of manual operations.',
+          ru: 'Сервис автоматизации корпоративного менеджера паролей Vaultwarden (self-hosted Bitwarden). Закрывает рутину администрирования: заведение и удаление сотрудников, управление группами доступа и полный онбординг нового пользователя одним запросом. Позволяет встроить управление паролями в общие процессы найма и увольнения вместо ручных операций.' },
+        tech: ['Node.js', 'Vaultwarden', 'Bitwarden', 'REST API', 'Docker'] },
+      { title: 'VoxelGen', kind: '3D / WebGL', topics: ['webgl'], url: 'https://voxelgen.reneos.com/',
+        short: { en: 'Turns any 3D model into voxels, right in the browser.', ru: 'Превращает любую 3D-модель в воксельную прямо в браузере.' },
+        desc: { en: 'A tool that turns any 3D model into a voxel one right in the browser: upload a GLB, adjust voxel size and density — and get a result ready for export to OBJ. The whole voxelization runs on the client side; to keep it fast even on dense geometry I used accelerated ray intersection.',
+          ru: 'Инструмент превращает любую 3D-модель в воксельную прямо в браузере: загружаешь GLB, настраиваешь размер и плотность вокселей — получаешь готовый результат на экспорт в OBJ. Вся вокселизация считается на стороне клиента; чтобы это работало быстро даже на плотной геометрии, применил ускоренное пересечение лучей.' },
+        tech: ['Vue 3', 'Three.js', 'WebGL', 'GLB/OBJ'] },
+      { title: 'Pirates', kind: 'Game / WebGL', topics: ['webgl', 'realtime'], url: 'https://pirates.reneos.com/',
+        short: { en: 'Real-time multiplayer naval battles in the browser.', ru: 'Морские бои на парусниках в реальном времени, в браузере.' },
+        desc: { en: 'A multiplayer browser game — real-time naval battles between sailing ships, with no installation. I implemented the 3D scene, the physics of movement and combat, and the server-side synchronization of state between players with minimal latency.',
+          ru: 'Многопользовательская браузерная игра — морские бои на парусниках в реальном времени, без установки. Реализовал 3D-сцену, физику движения и боя, а также серверную синхронизацию состояния между игроками с минимальной задержкой.' },
+        tech: ['Three.js', 'WebGL', 'Node.js', 'WebSocket'] },
+      { title: 'WebRTC Caller', kind: 'Realtime / WebRTC', topics: ['realtime'], url: 'https://call.reneos.com/',
+        short: { en: 'Peer-to-peer audio and video calls with no sign-up.', ru: 'P2P-аудио- и видеозвонки без регистрации.' },
+        desc: { en: 'Audio and video calls straight in the browser, without plugins and without sign-up: one person creates a call and shares a short key, the other joins with it. The media stream goes directly between the participants (peer-to-peer); only connection setup passes through the server.',
+          ru: 'Аудио- и видеозвонки прямо в браузере, без плагинов и регистрации: один создаёт звонок и делится коротким ключом, второй подключается по нему. Медиапоток идёт напрямую между участниками (peer-to-peer), через сервер проходит только установка соединения.' },
+        tech: ['WebRTC', 'Node.js', 'WebSocket', 'Vue 3'] },
+      { title: 'CanvaIsland', kind: 'Metaverse / Web3', topics: ['webgl', 'web3'], url: 'https://youtu.be/jx0j8WuPm8o',
+        short: { en: 'A metaverse builder where NFTs are the building blocks.', ru: 'Метавселенная-конструктор, где NFT — строительные блоки.' },
+        desc: { en: 'A metaverse builder: a visual editor for virtual spaces where NFTs act as the building blocks. I owned the project end to end — architecture, client and scene editor, multi-service backend and the protocol for real-time synchronization between users. Integrations with OpenSea and Etherscan, login via MetaMask.',
+          ru: 'Метавселенная-конструктор: визуальный редактор виртуальных пространств, где строительными блоками выступают NFT. Отвечал за проект целиком — архитектуру, клиент и редактор сцен, мультисервисный бэкенд и протокол реалтайм-синхронизации между пользователями. Интеграции с OpenSea и Etherscan, вход через MetaMask.' },
+        tech: ['Vue', 'Node.js', 'Three.js', 'WebSocket', 'MongoDB', 'Web3'] }
+    ];
+
+    const G = [
+      { key: { en: 'Languages', ru: 'Языки' }, items: ['JavaScript / Node.js', 'TypeScript', 'Java / Spring', 'C#', 'C++'] },
+      { key: 'Frontend', items: ['Vue 3', 'Nuxt', 'HTML5', 'PrimeVue', 'Three.js / WebGL', 'Module Federation', 'PWA / SSR', 'GraphQL', 'WebSocket', 'Webpack', 'Web3 / ethers.js', 'Chrome Extensions (MV3)', 'MediaRecorder / Screen Capture', 'Web Audio'] },
+      { key: 'Backend & API', items: ['Node.js', 'Spring', 'REST', 'GraphQL', 'WebSocket', 'WebRTC', { en: 'Microservices', ru: 'Микросервисы' }, 'Event-driven', 'Nginx', 'JWT / AES-256-GCM'] },
+      { key: 'AI', items: ['RAG', { en: 'Semantic search', ru: 'Семантический поиск' }, 'pgvector', 'MCP', 'Google Gemini', 'OpenAI', 'n8n'] },
+      { key: { en: 'Data', ru: 'Данные' }, items: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'ClickHouse', 'RabbitMQ', 'Kafka', 'pgvector', 'SQLite', 'Firebase'] },
+      { key: 'Platform / DevOps', items: ['Docker / Compose', 'Kubernetes', 'Docker Swarm', 'ArgoCD (GitOps)', 'Helm', 'HashiCorp Vault', 'CI/CD (GitHub / GitLab)', 'OpenTelemetry / SigNoz', 'AWS', 'Google Cloud'] },
+      { key: '3D / WebGL', items: ['Three.js', 'WebGL', 'Unity 3D', 'Blender', '3DMax', 'BIM / IFC'] }
+    ];
+    const groups = G.map((g, i) => ({ n: String(i + 1).padStart(2, '0'), label: L(g.key), items: g.items.map(L) }));
+    const techCount = G.reduce((a, g) => a + g.items.length, 0);
+
+    const CAN = {
+      en: ['Web applications: charts, analytics, dashboards, SPA / PWA / SSR', '3D web applications (metaverse, BIM/IFC, interactive presentations)', 'Server-side solutions: real-time data exchange, messengers, microservices', 'AI assistants: RAG, semantic search, MCP tools for agents', 'Infrastructure: Kubernetes, GitOps (ArgoCD), CI/CD, observability', 'Bots for Telegram, VK applications and communities', 'Games (2D/3D, single-player / multiplayer, turn-based / real-time)', 'Mobile applications (Android / Unity / PWA)', 'API integrations: Binance, MetaMask, Etherscan, OpenSea, Google API, Firebase, Web3'],
+      ru: ['Web-приложения: графики, аналитика, dashboards, SPA / PWA / SSR', '3D Web-приложения (Metaverse, BIM/IFC, интерактивные презентации)', 'Серверные решения: обмен данными реального времени, мессенджеры, микросервисы', 'AI-помощники: RAG, семантический поиск, MCP-инструменты для агентов', 'Инфраструктура: Kubernetes, GitOps (ArgoCD), CI/CD, наблюдаемость', 'Боты для Telegram, приложения и группы ВКонтакте', 'Игры (2D/3D, одиночные / мультиплеер, пошаговые / реалтайм)', 'Приложения для мобильных платформ (Android / Unity / PWA)', 'Интеграции API: Binance, MetaMask, Etherscan, OpenSea, Google API, Firebase, Web3']
+    };
+    const can = CAN[lang].map((text, i) => ({ n: String(i + 1).padStart(2, '0'), text }));
+
+    const host = (u) => u.replace(/^https?:\/\//, '').replace(/\/.*$/, '');
+    const f = this.state.filter;
+    const shown = P.filter((p) => f === 'all' || p.topics.includes(f)).map((p, i) => {
+      const isOpen = this.state.open === p.title;
+      return {
+        num: String(i + 1).padStart(2, '0'), title: p.title, kind: L(p.kind), short: L(p.short), desc: L(p.desc), tech: p.tech,
+        isOpen, expanded: isOpen ? 'true' : 'false', sign: isOpen ? '−' : '+',
+        hasUrl: !!p.url, url: p.url || '#work', host: p.url ? host(p.url) : '',
+        hasMirror: !!p.mirror, mirror: p.mirror || '#work', mirrorHost: p.mirror ? host(p.mirror) : '',
+        toggle: () => this.setState({ open: isOpen ? null : p.title })
+      };
+    });
+    const topicIds = ['all', 'platforms', 'backend', 'ai', 'realtime', 'webgl', 'devops', 'tools', 'web3'];
+    const filters = topicIds.map((id) => {
+      const on = id === f;
+      return {
+        label: id === 'all' ? t.all : L(topicLabels[id]),
+        count: id === 'all' ? P.length : P.filter((p) => p.topics.includes(id)).length,
+        on, off: !on, pick: () => this.setState({ filter: id })
+      };
+    });
+
+    const langs = ['en', 'ru'].map((id) => ({ label: id.toUpperCase(), on: id === lang, off: id !== lang, pick: () => this.setState({ lang: id }) }));
+
+    const term = [
+      { k: 'core', v: 'Node.js · Vue 3' },
+      { k: 'front', v: 'Three.js · Nuxt · Module Federation' },
+      { k: 'back', v: 'Rust · GraphQL · WebSocket · WebRTC' },
+      { k: 'data', v: 'PostgreSQL · Redis · Kafka · ClickHouse' },
+      { k: 'infra', v: 'Kubernetes · ArgoCD · Helm · Vault' },
+      { k: 'ai', v: 'RAG · MCP · pgvector · Gemini' }
+    ];
+    const stats = [
+      { n: String(P.length), l: t.sProjects },
+      { n: String(techCount), l: t.sTech },
+      { n: String(G.length), l: t.sAreas },
+      { n: '1', l: t.sOne }
+    ];
+    const core = ['Node.js', 'Vue 3', 'Rust', 'Three.js', 'PostgreSQL', 'Kubernetes', 'RAG', 'MCP', 'WebRTC', 'GraphQL'];
+
+    return { accent, t, langs, term, stats, marquee: core.concat(core), filters, shown, can, groups };
+  }
+}
+</script>
+
+
+</body></html>
