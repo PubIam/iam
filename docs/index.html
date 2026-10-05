@@ -298,7 +298,7 @@ a{color:#F2F1EC;text-decoration:none}a:hover{color:#FFFFFF}
 .va-span2{grid-column:span 2}
 .va-span3{grid-column:1 / -1}
 @media (max-width:820px){.va-hide-sm{display:none !important}.va-span2{grid-column:auto}}
-@media (prefers-reduced-motion:reduce){.va-caret{animation:none}}
+
 </style>
 </helmet>
 
@@ -356,11 +356,11 @@ a{color:#F2F1EC;text-decoration:none}a:hover{color:#FFFFFF}
         <span style="margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8B8F97">~/viktor — zsh</span>
       </div>
       <div style="padding: 22px; font-family: 'JetBrains Mono', monospace; font-size: 14px; line-height: 1.85; color: #8B8F97">
-        <div style="color: #C9CBD0"><span style="color: {{accent}}">❯</span> whoami --stack</div>
+        <div style="color: #C9CBD0; white-space: pre"><span style="color: {{accent}}">❯</span> {{cmd}}<sc-if value="{{caretTop}}" hint-placeholder-val="{{ false }}"><span style="display: inline-block; width: 9px; height: 17px; background: #F2F1EC; vertical-align: -3px; animation: {{topAnim}}"></span></sc-if></div>
         <sc-for list="{{term}}" as="r" hint-placeholder-count="5">
-          <div style="display: flex; gap: 12px"><span style="width: 56px; flex: none">{{r.k}}</span><span style="color: #F2F1EC">{{r.v}}</span></div>
+          <div style="display: flex; gap: 12px; visibility: {{r.vis}}"><span style="width: 56px; flex: none">{{r.k}}</span><span style="color: #F2F1EC">{{r.v}}</span></div>
         </sc-for>
-        <div style="margin-top: 8px"><span style="color: {{accent}}">❯</span> <span class="va-caret" style="display: inline-block; width: 9px; height: 17px; background: #F2F1EC; vertical-align: -3px"></span></div>
+        <div style="margin-top: 8px"><span style="color: {{accent}}">❯</span> <sc-if value="{{caretBottom}}" hint-placeholder-val="{{ true }}"><span class="va-caret" style="display: inline-block; width: 9px; height: 17px; background: #F2F1EC; vertical-align: -3px"></span></sc-if></div>
       </div>
     </div>
   </section>
@@ -615,7 +615,7 @@ a{color:#F2F1EC;text-decoration:none}a:hover{color:#FFFFFF}
       <div style="padding: 22px; font-family: 'JetBrains Mono', monospace; font-size: 14px; line-height: 1.85; color: #8B8F97">
         <div style="color: #C9CBD0"><span style="color: #C6F432">❯</span> whoami --stack</div>
         
-          <div style="display: flex; gap: 12px"><span style="width: 56px; flex: none">{{r.k}}</span><span style="color: #F2F1EC">{{r.v}}</span></div>
+          <div style="display: flex; gap: 12px; visibility: {{r.vis}}"><span style="width: 56px; flex: none">{{r.k}}</span><span style="color: #F2F1EC">{{r.v}}</span></div>
         
         <div style="margin-top: 8px"><span style="color: #C6F432">❯</span> <span class="va-caret" style="display: inline-block; width: 9px; height: 17px; background: #F2F1EC; vertical-align: -3px"></span></div>
       </div>
@@ -818,7 +818,23 @@ a{color:#F2F1EC;text-decoration:none}a:hover{color:#FFFFFF}
 class Component extends DCLogic {
   constructor(props) {
     super(props);
-    this.state = { filter: 'all', open: 'Reneos Cloud', lang: null };
+    this.state = { filter: 'all', open: 'Reneos Cloud', lang: null, tPhase: 'idle' };
+  }
+  componentDidMount() {
+    const CMD = 'whoami --stack', ROWS = 6;
+    const at = (ms, fn) => { this._termTimer = setTimeout(fn, ms); };
+    const prompt = () => { this.setState({ tPhase: 'wait', tChars: 0, tRows: 0 }); at(600 + Math.random() * 500, () => type(1)); };
+    const type = (i) => {
+      this.setState({ tPhase: 'type', tChars: i });
+      if (i < CMD.length) at(50 + Math.random() * 110 + (CMD[i] === ' ' ? 140 : 0), () => type(i + 1));
+      else at(380, () => out(1));
+    };
+    const out = (k) => { this.setState({ tPhase: 'out', tRows: k }); if (k < ROWS) at(80, () => out(k + 1)); else at(120, idle); };
+    const idle = () => { this.setState({ tPhase: 'idle' }); at(1000 + Math.random() * 2000, prompt); };
+    idle();
+  }
+  componentWillUnmount() {
+    clearTimeout(this._termTimer);
   }
   renderVals() {
     const accent = this.props.accent ?? '#C6F432';
@@ -1018,9 +1034,17 @@ class Component extends DCLogic {
       { n: String(G.length), l: t.sAreas },
       { n: '1', l: t.sOne }
     ];
+    const cmdFull = 'whoami --stack';
+    const ph = this.state.tPhase;
+    const shownRows = ph === 'idle' ? term.length : (this.state.tRows ?? term.length);
+    const termView = term.map((r, i) => ({ ...r, vis: i < shownRows ? 'visible' : 'hidden' }));
+    const cmd = ph === 'wait' || ph === 'type' ? cmdFull.slice(0, this.state.tChars ?? 0) : cmdFull;
+    const caretTop = ph === 'wait' || ph === 'type';
+    const topAnim = ph === 'wait' ? 'va-c 1s steps(1) infinite' : 'none';
+    const caretBottom = ph === 'idle';
     const core = ['Node.js', 'Vue 3', 'TypeScript', 'Rust', 'Nuxt', 'Three.js', 'WebGL', 'Module Federation', 'GraphQL', 'WebSocket', 'WebRTC', 'PostgreSQL', 'Redis', 'Kafka', 'ClickHouse', 'MongoDB', 'RabbitMQ', 'Docker', 'Kubernetes', 'ArgoCD', 'Helm', 'Vault', 'OpenTelemetry', 'RAG', 'MCP', 'pgvector', 'Gemini', 'OpenAI', 'Java / Spring', 'Unity 3D'];
 
-    return { accent, t, langs, term, stats, marquee: core.concat(core), marqueeDur: (core.length * 8) + 's', filters, shown, can, groups };
+    return { accent, t, langs, term: termView, cmd, caretTop, topAnim, caretBottom, stats, marquee: core.concat(core), marqueeDur: (core.length * 8) + 's', filters, shown, can, groups };
   }
 }
 </script>
