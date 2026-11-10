@@ -297,7 +297,11 @@ a{color:#F2F1EC;text-decoration:none}a:hover{color:#FFFFFF}
 @keyframes va-c{50%{opacity:0}}
 .va-span2{grid-column:span 2}
 .va-span3{grid-column:1 / -1}
-@media (max-width:820px){.va-hide-sm{display:none !important}.va-span2{grid-column:auto}}
+.va-shots{display:flex;gap:12px;overflow-x:auto;padding:0 4px 28px 60px;scrollbar-width:thin;scrollbar-color:#2A2D33 transparent}
+.va-shot{flex:none;display:block;border-radius:14px;overflow:hidden;border:1px solid #23262C;background:#111317;transition:border-color .2s ease}
+.va-shot:hover{border-color:#5A5E66}
+.va-shot img{display:block;height:clamp(200px,30vw,420px);width:auto}
+@media (max-width:820px){.va-hide-sm{display:none !important}.va-span2{grid-column:auto}.va-shots{padding-left:4px}}
 
 </style>
 </helmet>
@@ -418,6 +422,14 @@ a{color:#F2F1EC;text-decoration:none}a:hover{color:#FFFFFF}
             <span style="display: inline-flex; flex: none; width: 48px; height: 48px; border-radius: 50%; border: 1px solid #2A2D33; align-items: center; justify-content: center; color: {{accent}}; font-family: 'JetBrains Mono', monospace; font-size: 22px">{{p.sign}}</span>
           </button>
           <sc-if value="{{p.isOpen}}" hint-placeholder-val="{{ false }}">
+            <div>
+            <sc-if value="{{p.hasShots}}" hint-placeholder-val="{{ false }}">
+              <div class="va-shots">
+                <sc-for list="{{p.shots}}" as="sh" hint-placeholder-count="1">
+                  <a class="va-shot" href="{{sh.src}}" target="_blank" rel="noopener"><img sc-camel-src="{{sh.src}}" alt="{{sh.alt}}"></a>
+                </sc-for>
+              </div>
+            </sc-if>
             <div style="display: flex; flex-wrap: wrap; gap: 32px; padding: 0 4px 36px 60px">
               <p style="flex: 999 1 420px; min-width: 0; margin: 0; font-size: 16px; line-height: 1.65; color: #C9CBD0; max-width: 760px">{{p.desc}}</p>
               <div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 18px">
@@ -435,6 +447,7 @@ a{color:#F2F1EC;text-decoration:none}a:hover{color:#FFFFFF}
                   </sc-if>
                 </div>
               </div>
+            </div>
             </div>
           </sc-if>
         </div>
@@ -1026,12 +1039,20 @@ class Component extends DCLogic {
     };
     const can = CAN[lang].map((text, i) => ({ n: String(i + 1).padStart(2, '0'), text }));
 
+    const SHOTS = {
+      'Reneos Cloud': ['reneos-cloud'], 'TaskFlow': ['taskflow'], 'AITeam': ['aiteam'], 'Runflow': ['runflow'],
+      'HubRu': ['hubru-1', 'hubru-2'], 'BIMView': ['bimview'], 'Rakursa': ['rakursa'], 'BitBot': ['bitbot'], 'VoxelGen': ['voxelgen'],
+      'Warfort': ['warfort'], 'Team War': ['teamwar'], 'Marta’s Bay': ['martabay'], 'Pirate Island': ['pirate-island-1', 'pirate-island-2'],
+      'Pirates': ['pirates'], 'WebRTC Caller': ['webrtc-caller'], 'CanvaIsland': ['canvaisland']
+    };
     const host = (u) => u.replace(/^https?:\/\//, '').replace(/\/.*$/, '');
     const f = this.state.filter;
     const shown = P.filter((p) => f === 'all' || p.topics.includes(f)).map((p, i) => {
       const name = L(p.title);
       const isOpen = this.state.open === name;
+      const shots = (SHOTS[typeof p.title === 'string' ? p.title : p.title.en] || []).map((f, k, all) => ({ src: 'assets/work/' + f + '.jpg', alt: all.length > 1 ? name + ' — ' + (k + 1) : name }));
       return {
+        hasShots: shots.length > 0, shots,
         num: String(i + 1).padStart(2, '0'), title: name, kind: L(p.kind), short: L(p.short), desc: L(p.desc), tech: p.tech,
         isOpen, expanded: isOpen ? 'true' : 'false', sign: isOpen ? '−' : '+',
         hasUrl: !!p.url, url: p.url || '#work', host: p.url ? host(p.url) : '',
